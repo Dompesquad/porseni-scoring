@@ -5,8 +5,8 @@ function verifikasiKode() {
 
   // Kode akses untuk admin, juri olahraga, dan juri seni
   const adminKode = "admin123"; // Kode untuk admin
-  const juriOlahragaKode = "juri-olahraga123"; // Kode untuk juri olahraga
-  const juriSeniKode = "juri-seni123"; // Kode untuk juri seni
+  const juriOlahragaKode = "juri123"; // Kode untuk juri olahraga
+  const juriSeniKode = "juri456"; // Kode untuk juri seni
   
   // Cek kode akses
   if (kodeInput === adminKode) {
