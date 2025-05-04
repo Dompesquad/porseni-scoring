@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pendaftaran Peserta PORSENI</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Pendaftaran Peserta PORSENI</h2>
+    
+    <label for="namaPeserta">Nama Peserta:</label>
+    <input type="text" id="namaPeserta" required />
+
+    <label for="kelasPeserta">Pilih Kelas:</label>
+    <select id="kelasPeserta" required>
+      <option value="VII.1">VII.1</option>
+      <option value="VII.2">VII.2</option>
+      <option value="VII.3">VII.3</option>
+      <option value="VIII.1">VIII.1</option>
+      <option value="VIII.2">VIII.2</option>
+      <option value="VIII.3">VIII.3</option>
+      <option value="IX.1">IX.1</option>
+      <option value="IX.2">IX.2</option>
+      <option value="IX.3">IX.3</option>
+    </select>
+
+    <label for="kategoriLomba">Pilih Lomba:</label>
+    <select id="kategoriLomba" required>
+      <option value="Menyanyi">Menyanyi</option>
+      <option value="Senam">Senam</option>
+      <option value="Memasak">Memasak</option>
+      <option value="Kebersihan Kelas">Kebersihan Kelas</option>
+      <option value="Kultum">Kultum</option>
+      <option value="Adzan">Adzan</option>
+      <option value="Qasidah">Qasidah</option>
+      <option value="Ngaji">Ngaji</option>
+      <option value="Hafalan">Hafalan</option>
+      <option value="Futsal Putra">Futsal Putra</option>
+      <option value="Sepak Takraw Putra">Sepak Takraw Putra</option>
+      <option value="Bulutangkis Putra Solo">Bulutangkis Putra Solo</option>
+      <option value="Bulutangkis Putri Solo">Bulutangkis Putri Solo</option>
+      <option value="Bulutangkis Putra Ganda">Bulutangkis Putra Ganda</option>
+      <option value="Bulutangkis Putri Ganda">Bulutangkis Putri Ganda</option>
+      <option value="Voly Putra">Voly Putra</option>
+      <option value="Voly Putri">Voly Putri</option>
+    </select>
+
+    <button onclick="daftarPeserta()">Daftar</button>
+
+    <p id="pesanPendaftaran"></p>
+  </div>
+
+  <script src="js/pendaftaran.js"></script>
+</body>
+</html>
