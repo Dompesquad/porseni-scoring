@@ -1,0 +1,29 @@
+function eksporKeExcel() {
+  // Mengambil data dari localStorage
+  const skorOlahraga = JSON.parse(localStorage.getItem("skorOlahraga")) || [];
+  const nilaiSeni = JSON.parse(localStorage.getItem("nilaiSeni")) || [];
+
+  // Membuat data yang akan dimasukkan ke file Excel
+  const dataOlahraga = skorOlahraga.map(data => {
+    return [data.cabang, data.timA, data.timB, data.skorA, data.skorB, data.waktu];
+  });
+
+  const dataSeni = nilaiSeni.map(data => {
+    return [data.kategori, data.kelas, data.nilai, data.waktu];
+  });
+
+  // Membuat workbook baru
+  const wb = XLSX.utils.book_new();
+
+  // Menambahkan data Olahraga ke sheet baru
+  const wsOlahraga = XLSX.utils.aoa_to_sheet([["Cabang", "Tim A", "Tim B", "Skor A", "Skor B", "Waktu"], ...dataOlahraga]);
+  // Menambahkan data Seni ke sheet baru
+  const wsSeni = XLSX.utils.aoa_to_sheet([["Kategori", "Kelas", "Nilai", "Waktu"], ...dataSeni]);
+
+  // Menambahkan sheet ke dalam workbook
+  XLSX.utils.book_append_sheet(wb, wsOlahraga, "Klasemen Olahraga");
+  XLSX.utils.book_append_sheet(wb, wsSeni, "Klasemen Seni & Keagamaan");
+
+  // Menyimpan file Excel
+  XLSX.writeFile(wb, "Klasemen_PORSENI.xlsx");
+}
