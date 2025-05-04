@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klasemen PORSENI</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Klasemen PORSENI</h2>
+
+    <h3>Skor Olahraga</h3>
+    <div id="klasemenOlahraga"></div>
+
+    <h3>Skor Seni & Keagamaan</h3>
+    <div id="klasemenSeni"></div>
+
+    <!-- Tombol Ekspor ke Excel -->
+    <button onclick="eksporKeExcel()">Ekspor ke Excel</button>
+
+    <p id="pesanKlasemen"></p>
+  </div>
+
+  <script src="js/klasemen.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+  <script src="js/ekspor.js"></script>
+</body>
+</html>
