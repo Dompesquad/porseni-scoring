@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sertifikat Juara</title>
+  <link rel="stylesheet" href="css/sertifikat.css" />
+  
+  <!-- Link ke CDN jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- Sertifikat Tampilan -->
+  <div id="sertifikat">
+    <h2>SERTIFIKAT PENGHARGAAN</h2>
+    <p id="kategoriSertifikat"></p>
+    <p id="namaSiswa"></p>
+    <p id="kelasSertifikat"></p>
+    <p id="tanggalSertifikat"></p>
+  </div>
+
+  <!-- Tombol untuk mengunduh PDF -->
+  <button onclick="unduhPDF()">Unduh Sertifikat PDF</button>
+  <button onclick="cetakSertifikat()">Cetak Sertifikat</button>
+
+  <script src="js/sertifikat.js"></script>
+</body>
+</html>
