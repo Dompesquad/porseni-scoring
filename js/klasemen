@@ -1,0 +1,37 @@
+// Menampilkan klasemen olahraga
+function tampilkanKlasemenOlahraga() {
+  const skorOlahraga = JSON.parse(localStorage.getItem("skorOlahraga")) || [];
+
+  let klasemenOlahraga = "<ul>";
+  skorOlahraga.forEach(data => {
+    klasemenOlahraga += `
+      <li>
+        ${data.cabang} - ${data.timA} vs ${data.timB} | Skor: ${data.skorA} - ${data.skorB} | Waktu: ${data.waktu}
+      </li>`;
+  });
+  klasemenOlahraga += "</ul>";
+
+  document.getElementById("klasemenOlahraga").innerHTML = klasemenOlahraga;
+}
+
+// Menampilkan klasemen seni & keagamaan
+function tampilkanKlasemenSeni() {
+  const nilaiSeni = JSON.parse(localStorage.getItem("nilaiSeni")) || [];
+
+  let klasemenSeni = "<ul>";
+  nilaiSeni.forEach(data => {
+    klasemenSeni += `
+      <li>
+        ${data.kategori} - ${data.kelas} | Nilai: ${data.nilai} | Waktu: ${data.waktu}
+      </li>`;
+  });
+  klasemenSeni += "</ul>";
+
+  document.getElementById("klasemenSeni").innerHTML = klasemenSeni;
+}
+
+// Update klasemen setiap kali ada input baru
+setInterval(function() {
+  tampilkanKlasemenOlahraga();
+  tampilkanKlasemenSeni();
+}, 1000);  // Update setiap 1 detik
