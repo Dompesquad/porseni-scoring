@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login PORSENI</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Kode Akses - PORSENI</title>
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
   <div class="login-container">
     <h2>Masukkan Kode Akses</h2>
-    <input type="password" id="kodeAkses" placeholder="Kode Akses..." />
+    <input type="password" id="kodeInput" placeholder="Kode Akses" autofocus>
     <button onclick="verifikasiKode()">Masuk</button>
-    <p id="pesan"></p>
+    <p id="info" class="info"></p>
   </div>
 
-  <script src="js/akses.js"></script>
+  <script src="login.js"></script>
 </body>
 </html>
