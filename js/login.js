@@ -1,25 +1,22 @@
-const kodeAkses = {
-  admin: 'admin123',
-  nyanyi: 'nyanyi456',
-  senam: 'senam456',
-  masak: 'masak456',
-  kultum: 'kultum456',
-  adzan: 'adzan456',
-  qasidah: 'qasidah456',
-  ngaji: 'ngaji456',
-  hafalan: 'hafalan456',
-  // Tambah cabang sesuai kebutuhan
-};
-
+// login.js
 function verifikasiKode() {
-  const input = document.getElementById("kodeInput").value.trim();
+  const kodeInput = document.getElementById("kodeInput").value;
   const info = document.getElementById("info");
 
-  if (input === kodeAkses.admin) {
-    window.location.href = "admin.html";
-  } else if (Object.values(kodeAkses).includes(input)) {
-    window.location.href = "input-nilai.html"; // Atau bisa disesuaikan ke input-nilai-[lomba].html
+  // Kode akses untuk admin, juri olahraga, dan juri seni
+  const adminKode = "admin123"; // Kode untuk admin
+  const juriOlahragaKode = "juri-olahraga123"; // Kode untuk juri olahraga
+  const juriSeniKode = "juri-seni123"; // Kode untuk juri seni
+  
+  // Cek kode akses
+  if (kodeInput === adminKode) {
+    window.location.href = "admin.html"; // Arahkan ke halaman admin
+  } else if (kodeInput === juriOlahragaKode) {
+    window.location.href = "input-olahraga.html"; // Arahkan ke halaman input olahraga
+  } else if (kodeInput === juriSeniKode) {
+    window.location.href = "input-seni.html"; // Arahkan ke halaman input seni
   } else {
-    info.textContent = "Kode akses salah!";
+    info.textContent = "Kode akses salah!"; // Pesan jika kode akses salah
+    info.style.color = "red";
   }
 }
