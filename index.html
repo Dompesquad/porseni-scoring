@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login PORSENI</title>
-  <link rel="stylesheet" href="css/login.css" />
+  <title>Menu Utama</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="login-container">
-    <h2>Login PORSENI</h2>
-    <input type="text" id="kodeInput" placeholder="Masukkan kode akses" />
-    <button onclick="verifikasiKode()">Masuk</button>
-    <p id="info"></p>
+  <div class="container">
+    <h2>Selamat Datang di PORSENI</h2>
+    
+    <nav>
+      <ul>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        <li><a href="input-olahraga.html">Juri Olahraga</a></li>
+        <li><a href="input-seni.html">Juri Seni</a></li>
+        <li><a href="klasemen.html" target="_blank">Klasemen Real-Time</a></li>
+      </ul>
+    </nav>
   </div>
-
+  
+  <!-- Link ke login.js untuk proses login -->
   <script src="js/login.js"></script>
 </body>
 </html>
