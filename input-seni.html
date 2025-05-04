@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Input Nilai Seni & Keagamaan</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Input Nilai Lomba Seni & Keagamaan</h2>
+
+    <label for="kategori">Cabang Lomba:</label>
+    <select id="kategori">
+      <option value="Menyanyi">Menyanyi</option>
+      <option value="Senam">Senam</option>
+      <option value="Memasak">Memasak</option>
+      <option value="Kebersihan Kelas">Kebersihan Kelas</option>
+      <option value="Kultum">Kultum</option>
+      <option value="Adzan">Adzan</option>
+      <option value="Qasidah">Qasidah</option>
+      <option value="Ngaji">Ngaji</option>
+      <option value="Hafalan">Hafalan</option>
+    </select>
+
+    <label for="kelas">Pilih Kelas:</label>
+    <select id="kelas"></select>
+
+    <label for="nilai">Nilai (60–100):</label>
+    <input type="number" id="nilai" min="60" max="100" />
+
+    <button onclick="simpanNilai()">Simpan Nilai</button>
+    <p id="pesanNilai"></p>
+  </div>
+
+  <script src="js/seni.js"></script>
+</body>
+</html>
