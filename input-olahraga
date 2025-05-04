@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Input Skor Olahraga</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Input Skor Pertandingan Olahraga</h2>
+
+    <label for="cabang">Cabang Olahraga:</label>
+    <select id="cabang">
+      <option value="Futsal Putra">Futsal Putra</option>
+      <option value="Sepak Takraw Putra">Sepak Takraw Putra</option>
+      <option value="Bulutangkis Solo Putra">Bulutangkis Solo Putra</option>
+      <option value="Bulutangkis Solo Putri">Bulutangkis Solo Putri</option>
+      <option value="Bulutangkis Ganda Putra">Bulutangkis Ganda Putra</option>
+      <option value="Bulutangkis Ganda Putri">Bulutangkis Ganda Putri</option>
+      <option value="Voli Putra">Voli Putra</option>
+      <option value="Voli Putri">Voli Putri</option>
+    </select>
+
+    <label for="timA">Tim A:</label>
+    <select id="timA"></select>
+
+    <label for="timB">Tim B:</label>
+    <select id="timB"></select>
+
+    <label for="skorA">Skor Tim A:</label>
+    <input type="number" id="skorA" min="0" />
+
+    <label for="skorB">Skor Tim B:</label>
+    <input type="number" id="skorB" min="0" />
+
+    <button onclick="simpanSkor()">Simpan Skor</button>
+    <p id="pesanSkor"></p>
+  </div>
+
+  <script src="js/olahraga.js"></script>
+</body>
+</html>
